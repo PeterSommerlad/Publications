@@ -1,3 +1,5 @@
+#eclipse workspace files
+.settings/*
 # Compiled Object files
 *.slo
 *.lo
