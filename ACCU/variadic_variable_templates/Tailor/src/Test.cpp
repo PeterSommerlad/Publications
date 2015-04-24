@@ -30,8 +30,12 @@ using namespace tailor::detail;
 
 constexpr double sinepihalf = tailor::sin(tailor::pi<long double>/2.0l);
 constexpr double cosinepi = tailor::cos(tailor::pi<long double>);
-constexpr auto sine30grad = tailor::sin(tailor::degrees<30>);
-static_assert(tailor::detail::abs(0.5l- sine30grad)<1e-16," sine 30 Grad is half");
+constexpr auto sine30degrees = tailor::sin(tailor::degrees<30>);
+static_assert(tailor::detail::abs(0.5l- sine30degrees)<1e-16," sine 30 Grad is half");
+
+constexpr auto bristolNorth=tailor::degrees<51,27>;
+constexpr auto bristolWest=tailor::degrees<2,35>;
+
 
 static_assert(sinepihalf==1.0l,"sine pi half is not one");
 static_assert(cosinepi==-1.0l,"cosine pi is not minus one");
@@ -44,7 +48,7 @@ static_assert(abs(testsinetab[1]-1.0)<1e-10, "sine pi/2 is 1");
 static_assert(abs(testsinetab[3]+1.0)<1e-10, "sine pi+pi/2 is -1");
 
 void testsineTableTest(){
-	long double eps=1e-10l;
+	long double eps { 1e-10l };
 	ASSERT_EQUAL(0.0,testsinetab[0]);
 	ASSERT_EQUAL_DELTA(1.0,testsinetab[1],eps);
 	ASSERT_EQUAL_DELTA(0.0,testsinetab[2],eps);
@@ -54,7 +58,7 @@ void testsineTableTest(){
 }
 using tailor::detail::abs;
 
-constexpr auto largesinetab=tables::make_sine_table<360+1,double>;
+constexpr auto largesinetab=tables::make_sine_table<360*60+1 ,double>;
 // limited to 1 degree -fconstexpr-steps=larger to get more
 static_assert(largesinetab.front()==0,"sine 0 is 0");
 static_assert(abs(largesinetab.back())<1e-12,"sine 2 pi is 0");
@@ -102,7 +106,6 @@ void testfak() {
 	ASSERT_EQUAL(120.0L, fak(5));
 	ASSERT_EQUAL(720.0L, fak(6));
 	ASSERT_EQUAL(2432902008176640000.0L, fak(20)); // up to n=10 -> fak(21) exact enough
-
 }
 
 void runAllTests(int argc, char const *argv[]) {
