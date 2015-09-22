@@ -1,0 +1,8 @@
+<testsuites>
+	<testsuite name="AllTests" tests="4">
+		<testcase classname="AllTests" name="testPrintLnNoArgs"/>
+		<testcase classname="AllTests" name="testPrintLnOnArg"/>
+		<testcase classname="AllTests" name="testPrintLnTwoArgs"/>
+		<testcase classname="AllTests" name="testPrintLnThreeArgs"/>
+	</testsuite>
+</testsuites>

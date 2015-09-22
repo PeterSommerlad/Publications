@@ -1,0 +1,14 @@
+<testsuites>
+	<testsuite name="AllTests" tests="6">
+		<testcase classname="AllTests" name="testFizzBuzzSequenceUpTo16"/>
+		<testcase classname="AllTests" name="fizzBuzzSingle1"/>
+		<testcase classname="AllTests" name="FizzBuzzSingleFizz"/>
+		<testcase classname="AllTests" name="FizzBuzzSingleBuzz"/>
+		<testcase classname="AllTests" name="FizzBuzzSequenceToBuzz"/>
+		<testcase classname="AllTests" name="FizzBuzzSequenceToFizzBuzzAndBeyond">
+			<failure message="../src/FizzBuzzClassComplete.cpp:139 FizzBuzzSequenceToFizzBuzzAndBeyond: R&quot;(1\n2\nFizz1\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\n)&quot; == out.str() expected:	1\n2\nFizz1\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\n	but was:	1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\n	">
+FizzBuzzSequenceToFizzBuzzAndBeyond: R&quot;(1\n2\nFizz1\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\n)&quot; == out.str() expected:	1\n2\nFizz1\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\n	but was:	1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\n	
+			</failure>
+		</testcase>
+	</testsuite>
+</testsuites>
