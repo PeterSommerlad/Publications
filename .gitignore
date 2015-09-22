@@ -28,3 +28,13 @@
 *.exe
 *.out
 *.app
+# Cevelop workspace defaults and project files
+Debug
+.metadata/
+.settings/
+*Test.xml
+
+# Mac OS Meta Files
+.DS_Store
+.Trashes
+
