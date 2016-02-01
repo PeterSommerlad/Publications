@@ -10,3 +10,7 @@ Code Examples for conference talks and other publications
 * Variadic Templates (2015)
 * Templator Demo (2015)
 * Variable Templates and compile-time computation (2015)
+
+## OOP conference
+
+* demo code from C++ compile time computation (2016)
